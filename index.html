@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title></title>
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  font-family: serif;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    :root {
+      --text-color: #111;
+      --bg-color: #fff;
+    }
 
-.container {
-  max-width: 600px;
-  margin: 120px auto;
-  padding: 0 20px;
-  line-height: 2;
-  font-size: 18px;
-  color: #111;
-}
-</style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+    }
+
+    .container {
+      box-sizing: border-box;
+      width: min(100%, 42rem);
+      margin: 0 auto;
+      padding-top: 22vh;
+      padding-right: 1.5rem;
+      padding-bottom: 20vh;
+      padding-left: 1.5rem;
+    }
+
+    .fragment {
+      margin: 0;
+      font-size: clamp(1.75rem, 3vw, 2.2rem);
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+    }
+
+    @media (max-width: 767px) {
+      .container {
+        width: 100%;
+        padding-top: 18vh;
+        padding-right: 1.75rem;
+        padding-bottom: 18vh;
+        padding-left: 1.75rem;
+      }
+
+      .fragment {
+        font-size: 2.05rem;
+        line-height: 1.7;
+      }
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
-  <p>
-    あのとき助けたのが、<br>
-    正しかったのかは、今でもわからない。
-  </p>
-</div>
+  <main class="container">
+    <p class="fragment">
+      あのとき助けたのが、<br>
+      正しかったのかは、今でもわからない。
+    </p>
+  </main>
 </body>
 </html>
